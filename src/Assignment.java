@@ -15,9 +15,30 @@ public class Assignment {
         return name;
     }
 
-    public boolean isComplete(){
-        return completed;
+    public void setName(String newName){
+        this.name = newName;
     }
+
+    public String getClassName(){
+        retrun className;
+    }
+
+    public void setClassName(String newClassName){
+        this.name = newClassName;
+    }
+
+    public String getDuedate(){
+        return dueDate;
+    }
+
+    public void setDueDate(String newDate){
+        this.dueDate = newDate;
+    }
+
+    public boolean isComplete(){
+        return completed; 
+    }
+
     public String toString(){
         return className + ": " + name + "(due: " + dueDate + ")";
     }
