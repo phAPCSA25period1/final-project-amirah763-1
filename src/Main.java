@@ -17,7 +17,7 @@ public class Main{
             int choice = input.nextInt();
             input.nextLine();
 
-            if (choice == 1);{
+            if (choice == 1){
                 System.out.println("Enter class name: ");
                 String className = input.nextLine();
 
@@ -33,11 +33,21 @@ public class Main{
                 System.out.println("Assignment added");
             }
 
-            if(choice == 2){
+            else if(choice == 2){
                 planner.displayAllAssignments();
             }
 
+            else if (choice == 3){
+                running = false;
+                System.out.println("Goodbye!");
+            }
+            else{
+                System.out.println("Invalid choice");
+            }
+
         }
+
+        input.close();
     }
 
 }
