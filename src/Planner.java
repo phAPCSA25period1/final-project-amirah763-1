@@ -16,8 +16,8 @@ public class Planner{
             System.out.println("No assignments yet");
             return;
         }
-        for(Assignment a: assignments){
-            System.out.println(a);
+        for(int i = 0; i < assignments.size(); i++){
+            System.out.println((i + 1) + ". " + assignments.get(i));
 
         }
     }
