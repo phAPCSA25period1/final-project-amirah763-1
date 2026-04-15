@@ -20,7 +20,7 @@ public class Assignment {
     }
 
     public String getClassName(){
-        retrun className;
+        return className;
     }
 
     public void setClassName(String newClassName){
