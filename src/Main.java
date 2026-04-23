@@ -1,4 +1,4 @@
-import java.util.Scanner;
+port java.util.Scanner;
 
 public class Main{
     public static void main(String[] args){
@@ -11,7 +11,9 @@ public class Main{
             System.out.println("Study Planner");
             System.out.println("1. Add Assignment");
             System.out.println("2. View Assignments");
-            System.out.println("3. Exit");
+            System.out.println("3. Add Task");
+            System.out.println("4. Mark Task Complete");
+            System.out.println("5. Exit");
 
             System.out.println("Choose an option: ");
             int choice = input.nextInt();
@@ -34,14 +36,26 @@ public class Main{
             }
 
             else if(choice == 2){
+                System.out.println();
                 planner.displayAllAssignments();
+                System.out.println();
             }
 
-            else if (choice == 3){
+            else if(choice == 3){
+                
+            }
+
+            else if(choice == 4){
+
+            }
+
+            else if (choice == 5){
                 running = false;
                 System.out.println("Goodbye!");
             }
+
             else{
+                System.out.println();
                 System.out.println("Invalid choice");
             }
 
