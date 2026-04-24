@@ -21,11 +21,12 @@ public class Task {
 
     public String toString(){
         if (completed){
-            return "complete! " + description;
+            return "[complete ✓] " + description;
         }
         else{
-            return "incomeplete " + description;
+            return "[incomplete ✗] " + description;
         }
     }
 
 }
+
