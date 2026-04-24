@@ -1,4 +1,4 @@
-port java.util.Scanner;
+import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args){
@@ -42,7 +42,16 @@ public class Main{
             }
 
             else if(choice == 3){
-                
+                planner.displayAllAssignments();
+
+                System.out.println("Choose an assignment number: ");
+                int assignmentIndex = input.nextInt() - 1;
+                input.nextLine();
+
+                if (assignmentIndex >= 0 && assignmentIndex < planner.getAssignments().size()){
+                    
+                }
+
             }
 
             else if(choice == 4){
