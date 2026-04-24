@@ -1,4 +1,4 @@
-public class Assignment {import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class Assignment {
     private String name;
@@ -28,10 +28,10 @@ public class Assignment {
     }
 
     public void setClassName(String newClassName){
-        this.name = newClassName;
+        this.className = newClassName;
     }
 
-    public String getDuedate(){
+    public String getDueDate(){
         return dueDate;
     }
 
@@ -39,7 +39,7 @@ public class Assignment {
         this.dueDate = newDate;
     }
 
-    public boolean isComplete(){
+    public boolean isCompleted(){
         return completed;
     }
 
@@ -50,6 +50,7 @@ public class Assignment {
     public void displayTasks(){
         if (tasks.size() == 0){
             System.out.println("No tasks yet");
+            return;
         }
         for (int i = 0; i < tasks.size(); i++){
             System.out.println((i +1) + ". " + tasks.get(i));
@@ -67,3 +68,4 @@ public class Assignment {
         return className + ": " + name + " " + "(due: " + dueDate + ")";
     }
 }
+
