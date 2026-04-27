@@ -22,4 +22,8 @@ public class Planner{
         }
     }
 
+    public ArrayList<Assignment> getAssignments(){
+        return assignments;
+    }
+
 }
