@@ -74,7 +74,17 @@ public class Main{
                     Assignment selected = planner.getAssignments().get(assignmentIndex);
 
                     selected.displayTasks();
+                    System.out.print("Choose a task number to mark complete: ");
+                    int taskIndex = input.nextInt() - 1;
+                    input.nextLine();
 
+                    selected.markTaskComplete(taskIndex);
+
+                    System.out.println("Task marked complete!");
+                }
+
+                else{
+                    System.out.println("Invalid assignment choice");
                 }
 
 
