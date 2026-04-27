@@ -49,12 +49,34 @@ public class Main{
                 input.nextLine();
 
                 if (assignmentIndex >= 0 && assignmentIndex < planner.getAssignments().size()){
-                    
-                }
+                    Assignment selected = planner.getAssignments().get(assignmentIndex);
 
+                    System.out.println("Enter assignment description: ");
+                    String desc = input.nextLine();
+
+                    Task t = new Task(desc);
+                    selected.addTask(t);
+
+                    System.out.println("Task added!");
+                }
+                else{
+                    System.out.println("Invalid assignment choice ");
+                }
             }
 
             else if(choice == 4){
+                planner.displayAllAssignments();
+                System.out.println("Choose an assignment number: ");
+                int assignmentIndex = input.nextInt() - 1;
+                input.nextLine();
+
+                if (assignmentIndex >= 0 && assignmentIndex < planner.getAssignments().size()){
+                    Assignment selected = planner.getAssignments().get(assignmentIndex);
+
+                    selected.displayTasks();
+
+                }
+
 
             }
 
@@ -69,6 +91,12 @@ public class Main{
             }
 
         }
+
+        input.close();
+    }
+
+}
+
 
         input.close();
     }
