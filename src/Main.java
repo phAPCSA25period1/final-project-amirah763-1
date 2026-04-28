@@ -8,7 +8,7 @@ public class Main{
         boolean running = true;
 
         while(running){
-            System.out.println("Study Planner");
+            System.out.println(" == Study Planner == ");
             System.out.println("1. Add Assignment");
             System.out.println("2. View Assignments");
             System.out.println("3. Add Task");
@@ -20,19 +20,24 @@ public class Main{
             input.nextLine();
 
             if (choice == 1){
+                System.out.println();
                 System.out.println("Enter class name: ");
                 String className = input.nextLine();
 
+                System.out.println();
                 System.out.println("Enter assignment name: ");
                 String name = input.nextLine();
 
+                System.out.println();
                 System.out.println("Enter due date (Ex: April 14): ");
                 String dueDate = input.nextLine();
 
                 Assignment a = new Assignment(name, className, dueDate);
                 planner.addAssignment(a);
 
-                System.out.println("Assignment added");
+                System.out.println();
+                System.out.println("Assignment added!");
+                System.out.println();
             }
 
             else if(choice == 2){
@@ -43,6 +48,7 @@ public class Main{
             }
 
             else if(choice == 3){
+                System.out.println();
                 planner.displayAllAssignments();
 
                 System.out.println("Choose an assignment number: ");
@@ -52,21 +58,28 @@ public class Main{
                 if (assignmentIndex >= 0 && assignmentIndex < planner.getAssignments().size()){
                     Assignment selected = planner.getAssignments().get(assignmentIndex);
 
+                    System.out.println();
                     System.out.println("Enter assignment description: ");
                     String desc = input.nextLine();
 
                     Task t = new Task(desc);
                     selected.addTask(t);
 
+                    System.out.println();
                     System.out.println("Task added!");
+                    System.out.println();
                 }
                 else{
+                    System.out.println();
                     System.out.println("Invalid assignment choice ");
+                    System.out.println();
                 }
             }
 
             else if(choice == 4){
+                System.out.println();
                 planner.displayAllAssignments();
+                System.out.println();
                 System.out.println("Choose an assignment number: ");
                 int assignmentIndex = input.nextInt() - 1;
                 input.nextLine();
@@ -82,10 +95,14 @@ public class Main{
                     selected.markTaskComplete(taskIndex);
 
                     System.out.println("Task marked complete!");
+                    System.out.println();
+
                 }
 
                 else{
+                    System.out.println();
                     System.out.println("Invalid assignment choice");
+                    System.out.println();
                 }
 
 
@@ -99,6 +116,7 @@ public class Main{
             else{
                 System.out.println();
                 System.out.println("Invalid choice");
+                System.out.println();
             }
 
         }
@@ -108,8 +126,3 @@ public class Main{
 
 }
 
-
-        input.close();
-    }
-
-}
