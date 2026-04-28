@@ -37,6 +37,7 @@ public class Main{
 
             else if(choice == 2){
                 System.out.println();
+                System.out.println("Assignments: ");
                 planner.displayAllAssignments();
                 System.out.println();
             }
