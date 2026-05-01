@@ -13,7 +13,9 @@ public class Main{
             System.out.println("2. View Assignments");
             System.out.println("3. Add Task");
             System.out.println("4. Mark Task Complete");
-            System.out.println("5. Exit");
+            System.out.println("5. Add to Weekly Schedule");
+            System.out.println("6. View Weekly Schedule");
+            System.out.println("7. Exit");
 
             System.out.println("Choose an option: ");
             int choice = input.nextInt();
@@ -107,8 +109,35 @@ public class Main{
 
 
             }
-
             else if (choice == 5){
+                planner.displayAllAssignments();
+
+                System.out.println("Choose Assignment: ");
+                int aIndex = input.nextInt() - 1;
+
+                System.out.println("Enter day (1 = Mon, 7 = Sun): ");
+                int day = input.nextInt() - 1;
+
+                System.out.println("Enter a time block (1-3): ");
+                int block = input.nextInt() - 1;
+                input.nextLine();
+
+                if (aIndex >= 0 && aIndex < planner.getAssignments().size()){
+                    Assignment selected = planner.getAssignments().get(aIndex);
+                    planner.assignToSchedule(day, block, selected);
+                    System.out.println("Added to schedule!");
+                }
+                else{
+                    System.out.println("Invalid choice.");
+                }
+
+            }
+
+            else if (choice == 6){
+                planner.displaySchedule();
+            }
+
+            else if (choice == 7){
                 running = false;
                 System.out.println("Goodbye!");
             }
