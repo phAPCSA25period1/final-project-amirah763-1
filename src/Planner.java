@@ -19,7 +19,13 @@ public class Planner{
             return;
         }
         for(int i = 0; i < assignments.size(); i++){
+            Assignment a = assignments.get(i);
+
             System.out.println((i + 1) + ". " + assignments.get(i));
+
+            a.displayTasks();
+
+            System.out.println();
 
         }
     }
@@ -28,8 +34,8 @@ public class Planner{
         return assignments;
     }
 
-    public void assignToSchedule(int day, int period, Assignment a){
-        schedule[day][period] = a;
+    public void assignToSchedule(int day, int block, Assignment a){
+        schedule[day][block] = a;
     }
 
     public void displaySchedule(){
@@ -49,3 +55,4 @@ public class Planner{
         }
     }
 }
+
