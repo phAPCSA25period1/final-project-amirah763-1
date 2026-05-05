@@ -49,11 +49,11 @@ public class Assignment {
 
     public void displayTasks(){
         if (tasks.size() == 0){
-            System.out.println("No tasks yet");
+            System.out.println("    No tasks yet");
             return;
         }
         for (int i = 0; i < tasks.size(); i++){
-            System.out.println((i +1) + ". " + tasks.get(i));
+            System.out.println("    " + (i +1) + ". " + tasks.get(i));
         }
     }
 
@@ -68,4 +68,3 @@ public class Assignment {
         return className + ": " + name + " " + "(due: " + dueDate + ")";
     }
 }
-
