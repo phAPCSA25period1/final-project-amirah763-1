@@ -1,13 +1,24 @@
 import java.util.Scanner;
 
-public class Main{
-    public static void main(String[] args){
+/**
+ * Main entry point for the Study Planner application.
+ * Provides a menu-driven interface for managing assignments, tasks, and a
+ * weekly schedule.
+ */
+public class Main {
+    /**
+     * The main method that runs the Study Planner application.
+     * Displays a menu and processes user input until the user chooses to exit.
+     *
+     * @param args command-line arguments (not used)
+     */
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Planner planner = new Planner();
 
         boolean running = true;
 
-        while(running){
+        while (running) {
             System.out.println(" == Study Planner == ");
             System.out.println("1. Add Assignment");
             System.out.println("2. View Assignments");
@@ -21,7 +32,7 @@ public class Main{
             int choice = input.nextInt();
             input.nextLine();
 
-            if (choice == 1){
+            if (choice == 1) {
                 System.out.println();
                 System.out.println("Enter class name: ");
                 String className = input.nextLine();
@@ -42,14 +53,14 @@ public class Main{
                 System.out.println();
             }
 
-            else if(choice == 2){
+            else if (choice == 2) {
                 System.out.println();
                 System.out.println("Assignments: ");
                 planner.displayAllAssignments();
                 System.out.println();
             }
 
-            else if(choice == 3){
+            else if (choice == 3) {
                 System.out.println();
                 planner.displayAllAssignments();
 
@@ -57,11 +68,11 @@ public class Main{
                 int assignmentIndex = input.nextInt() - 1;
                 input.nextLine();
 
-                if (assignmentIndex >= 0 && assignmentIndex < planner.getAssignments().size()){
+                if (assignmentIndex >= 0 && assignmentIndex < planner.getAssignments().size()) {
                     Assignment selected = planner.getAssignments().get(assignmentIndex);
 
                     System.out.println();
-                    System.out.println("Enter assignment description: ");
+                    System.out.println("Enter task description: ");
                     String desc = input.nextLine();
 
                     Task t = new Task(desc);
@@ -70,15 +81,14 @@ public class Main{
                     System.out.println();
                     System.out.println("Task added!");
                     System.out.println();
-                }
-                else{
+                } else {
                     System.out.println();
                     System.out.println("Invalid assignment choice ");
                     System.out.println();
                 }
             }
 
-            else if(choice == 4){
+            else if (choice == 4) {
                 System.out.println();
                 planner.displayAllAssignments();
                 System.out.println();
@@ -86,7 +96,7 @@ public class Main{
                 int assignmentIndex = input.nextInt() - 1;
                 input.nextLine();
 
-                if (assignmentIndex >= 0 && assignmentIndex < planner.getAssignments().size()){
+                if (assignmentIndex >= 0 && assignmentIndex < planner.getAssignments().size()) {
                     Assignment selected = planner.getAssignments().get(assignmentIndex);
 
                     selected.displayTasks();
@@ -101,15 +111,13 @@ public class Main{
 
                 }
 
-                else{
+                else {
                     System.out.println();
                     System.out.println("Invalid assignment choice");
                     System.out.println();
                 }
 
-
-            }
-            else if (choice == 5){
+            } else if (choice == 5) {
                 planner.displayAllAssignments();
 
                 System.out.println("Choose Assignment: ");
@@ -122,27 +130,26 @@ public class Main{
                 int block = input.nextInt() - 1;
                 input.nextLine();
 
-                if (aIndex >= 0 && aIndex < planner.getAssignments().size()){
+                if (aIndex >= 0 && aIndex < planner.getAssignments().size()) {
                     Assignment selected = planner.getAssignments().get(aIndex);
                     planner.assignToSchedule(day, block, selected);
                     System.out.println("Added to schedule!");
-                }
-                else{
+                } else {
                     System.out.println("Invalid choice.");
                 }
 
             }
 
-            else if (choice == 6){
+            else if (choice == 6) {
                 planner.displaySchedule();
             }
 
-            else if (choice == 7){
+            else if (choice == 7) {
                 running = false;
                 System.out.println("Goodbye!");
             }
 
-            else{
+            else {
                 System.out.println();
                 System.out.println("Invalid choice");
                 System.out.println();
