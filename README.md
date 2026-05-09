@@ -2,188 +2,94 @@
 # AP Computer Science A – Final Project
 ## Software & Systems Development Capstone
 
-Welcome to your **Final Project repository**.
+# Study Planner
 
-This repository will hold:
-- Your complete Java project
-- Your project journal and planning artifacts
-- Your final, working software product
-
-This is not just an assignment — it is a **capstone software project**.
+## Project Description
+This Study Planner is a Java program that is designed to help students organize their assignments, tasks, and study schedules in one place. The program allows users to create assignments for different classes, break assignments into smaller tasks, mark tasks as completed, and organize work into a weekly schedule. This project was created to help students manage their workload more effectively and avoid forgetting assignments or procrastinating.
 
 ---
 
-## 📌 Project Overview (Read Carefully)
-
-In this project, you will:
-- Design and build a **real piece of software**
-- Solve **one real problem** for **one clearly defined user**
-- Work using **agile development**
-- Show evidence of **professional software practices**
-- Use AI responsibly as a planning and support tool
-
-You will leave this course with something you can confidently say:
-
-> “I built this software.”
+## Who This Software Is For
+This program is designed for high school or college students who struggle with keeping track of assignments and balancing work from multiple classes. The software helps users stay organized by giving them a simple way to manage assignments, tasks, and study time.
 
 ---
 
-## 🔁 Required Workflow (How You Must Work)
-
-### ✅ Daily GitHub Commits (Required)
-You are expected to:
-- Make **at least one meaningful commit every class day**
-- Write **descriptive commit messages** that explain:
-  - What you changed
-  - Why you changed it
-  - What goal it supports
-
-✅ Good commit messages:
-- `Sprint 1: Created Player class and tested constructor`
-- `Sprint 2: Implemented 2D map and verified movement logic`
-
-🚫 Poor commit messages:
-- `updates`
-- `stuff`
-- `final version`
-
-Your commit history is **evidence of your thinking and progress**.
+## Features
+- Add assignments with a class name and due date
+- View all assignments in a numbered list
+- Add tasks to assignments
+- Mark tasks as completed
+- Display tasks connected to each assignment
+- Organize assignments into a weekly schedule
+- View a 7-day study schedule using a 2D array
 
 ---
 
-## 🔁 Agile Development & Sprints
+## Code Structure and Design
 
-You will complete **4 sprints**.  
-Each sprint includes:
-- Planning
-- Building
-- Testing
-- Feedback and reflection
+### Main Classes
+- `Main`
+  - Runs the menu system and handles user interaction.
 
-Each sprint ends with:
-- A sprint grade
-- A sprint reflection
-- Feedback exchanged with peers
+- `Planner`
+  - Stores all assignments in an ArrayList.
+  - Manages the weekly schedule using a 2D array.
 
-🚫 You may NOT complete multiple sprints at once.  
-✅ Each sprint grade is **final**.
+- `Assignment`
+  - Represents an assignment with a class name, due date, and list of tasks.
 
----
+- `Task`
+  - Represents an individual task that can be marked complete or incomplete.
 
-## 🧪 Testing Expectations
+### Data Structures
+- `ArrayList<Assignment>`
+  - Stores all assignments entered by the user.
 
-Testing is required every sprint.
+- `ArrayList<Task>`
+  - Stores tasks connected to each assignment.
 
-✅ Testing may include:
-- Running the program with different inputs
-- Print‑based testing
-- Driver program testing
-- Verifying logic and edge cases
+- `Assignment[][]`
+  - A 2D array used to create a weekly study schedule with days and study blocks.
 
-You should be able to explain:
-- What you tested
-- How you tested it
-- What you discovered or fixed
+### Program Logic
+The program uses object-oriented programming principles to organize data into classes and objects. The user interacts with the program through a text-based menu system. Assignments can contain multiple tasks, and assignments can also be added to different days and time blocks in the weekly schedule.
+
+### Class Diagram
+[text](https://drive.google.com/file/d/1xOTFXRzAldDOujYcF2ffieSUnBt8UqxZ/view?usp=sharing)
 
 ---
 
-## 🗂️ Required Project Components
+## How to Run the Program
 
-Your final project must include:
-
-- ✅ Multiple interacting Java classes
-- ✅ Encapsulation (`private` fields, appropriate getters/setters)
-- ✅ Arrays and/or ArrayLists
-- ✅ A purposeful **2D array**
-- ✅ A working driver program (`main`)
-- ✅ A class diagram matching your final code
-- ✅ Clear documentation
-- ✅ A program that runs and works
-
-Inheritance and interfaces are optional but encouraged.
+1. Open the project.
+2. Compile all Java files.
+3. Run the `Main` class.
+4. Use the menu options to:
+   - Add assignments
+   - View assignments
+   - Add tasks
+   - Mark tasks complete
+   - Add assignments to the weekly schedule
+   - View the schedule
 
 ---
 
-## 🤖 Using AI (Allowed, With Responsibility)
+## Development Process
+One challenge during development was organizing assignments and tasks so they interacted correctly across multiple classes. This was solved by using ArrayLists and object references to connect tasks to assignments.
 
-You may use AI to:
-- Organize ideas
-- Plan sprints
-- Debug code
-- Suggest design improvements
+One feature I am most proud of is the weekly schedule system because it uses a 2D array to organize assignments by day and study block.
 
-You must:
-- Document how you used AI
-- Review and evaluate AI suggestions
-- Understand and explain your final code
-
-AI should act like:
-> A junior developer you supervise — not something that builds the project for you.
+If I had more time, I would improve the project by adding file saving so assignments could still be stored after the program closes.
 
 ---
 
-## 📘 Project Journal
-
-All planning, work logs, testing notes, and reflections live in **your project journal**.
-
-If it happened during this project, it should be documented there.
+## Use of AI Tools
+ChatGPT and GitHub Copilot were used during development to help brainstorm project structure, debug issues, improve documentation, and generate JavaDoc comments. All AI-generated suggestions were reviewed, tested, and modified as needed. The final code was fully understood and implemented by the author.
 
 ---
 
-## ✅ Final Submission Expectations
+## Author Information
+Name: Amirah Bridgwater
+Course: AP Computer Science A
 
-By the end of the project:
-- Your program should run reliably
-- Your technical requirements should be met
-- Your code should be readable and organized
-- Your repository should look **professional**
-
----
-
-# ✨ Final Step: README Update (Very Important)
-
-When your project is complete, you must **rewrite this README**  
-so it reflects **your software**, not the assignment.
-
-Your final README should include:
-
----
-
-## 🔹 Project Title
-
-## 🔹 What This Software Does
-Explain your project in plain language.
-
-## 🔹 Who It’s For
-Describe the user and the problem being solved.
-
-## 🔹 How to Run the Program
-Clear steps so someone else can run your project.
-
-## 🔹 Technical Overview
-Brief description of:
-- Main classes
-- Key data structures
-- Program logic
-
-## 🔹 Class Diagram
-Include or link your final class diagram.
-
-## 🔹 Known Limitations / Future Improvements
-What works well, and what you would improve with more time.
-
----
-
-## 🎯 Final Reminder
-
-This repository represents **you as a developer**.
-
-Take pride in:
-- Your process
-- Your commits
-- Your code
-- Your documentation
-
-Build something real.  
-Build it thoughtfully.  
-Build it well.
+This project helped me better understand object-oriented programming, ArrayLists, 2D arrays, and how multiple classes interact in a larger Java program.
