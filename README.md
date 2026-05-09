@@ -55,7 +55,7 @@ This program is designed for high school or college students who struggle with k
 The program uses object-oriented programming principles to organize data into classes and objects. The user interacts with the program through a text-based menu system. Assignments can contain multiple tasks, and assignments can also be added to different days and time blocks in the weekly schedule.
 
 ### Class Diagram
-[text](https://drive.google.com/file/d/1xOTFXRzAldDOujYcF2ffieSUnBt8UqxZ/view?usp=sharing)
+[Click here for the class diagram](https://drive.google.com/file/d/1xOTFXRzAldDOujYcF2ffieSUnBt8UqxZ/view?usp=sharing)
 
 ---
 
